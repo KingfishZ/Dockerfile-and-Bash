@@ -6,14 +6,14 @@ while true
 do
 echo "Enter first file:"
 read f1
-if !([ -f $f1 ]);
+if !([[ -f $f1 ]]);
 then echo "This file not exit"
 continue
 fi
 md5sum $f1
 echo "Enter second file:"
 read f2
-if !([ -f $f2 ]);
+if !([[ -f $f2 ]]);
 then echo "This file not exit"
 continue
 fi
@@ -24,17 +24,17 @@ else
 echo "Data in file " $f2 ": " $(cat $f2) 
 echo "You want rewrite file [Y/N]? Daefault No:"
 read Ans;
-if [ $Ans = "y" ];
+if [[ $Ans = "y" ]];
 then printf $(md5sum $f1) > $f2
 echo "Data in file " $f2 ": " $(cat $f2)
-elif [ $Ans = "Y" ];
+elif [[ $Ans = "Y" ]];
 then printf $(md5sum $f1) > $f2
 echo "Data in file " $f2 ": " $(cat $f2)
-elif [ $Ans = "N" ];
+elif [[ $Ans = "N" ]];
 then echo "You didn't rewrite file";
-elif [ $Ans = "N" ];
+elif [[ $Ans = "N" ]];
 then echo "You didn't rewrite file";
-elif [ $Ans = "" ];
+elif [[ $Ans = "" ]];
 then echo "You didn't rewrite file";
 else "Incorrect answer. Please enter new answer"
 continue
@@ -42,9 +42,9 @@ fi
 fi
 echo "You want generate checksum again? [Y/N]. Default N";
 read AnsW
-if [ AnsW = "y" ];
+if [[ AnsW = "y" ]];
 then echo "You generate new checksum";
-elif [ AnsW = "y" ];
+elif [[ AnsW = "y" ]];
 then echo "You generate new checksum";
 else echo "Stop pragramm"
 break

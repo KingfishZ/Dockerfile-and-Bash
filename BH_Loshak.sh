@@ -17,7 +17,7 @@ if !([ -f $f2 ]);
 then echo "This file not exit"
 continue
 fi
-if [ $(stat -c%s $f1) -eq 0 ];
+if [ $(stat -c%s $f2) -eq 0 ];
 then printf $(md5sum $f1) > $f2
 echo "Data in file " $f2 ": " $(cat $f2)
 else 
@@ -42,9 +42,9 @@ fi
 fi
 echo "You want generate checksum again? [Y/N]. Default N";
 read AnsW
-if [ AnsW = "y"];
+if [ AnsW = "y" ];
 then echo "You generate new checksum";
-elif [ AnsW = "y"];
+elif [ AnsW = "y" ];
 then echo "You generate new checksum";
 else echo "Stop pragramm"
 break

@@ -46,17 +46,8 @@ if [ AnsW = "y"];
 then echo "You generate new checksum";
 elif [ AnsW = "y"];
 then echo "You generate new checksum";
-elif [ $Ans = "N" ];
-then echo "Stop pragramm"
+else echo "Stop pragramm"
 break
-elif [ $Ans = "N" ];
-then echo "Stop pragramm"
-break
-elif [ $Ans = "" ];
-then echo "Stop pragramm"
-break
-else "Incorrect answer. Please enter new answer"
-continue
 fi
 done
 
